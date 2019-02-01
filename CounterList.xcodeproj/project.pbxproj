@@ -8,13 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		BEDDF61C2203E2D5005D3B25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDF61B2203E2D5005D3B25 /* AppDelegate.swift */; };
-		BEDDF61E2203E2D5005D3B25 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDF61D2203E2D5005D3B25 /* ViewController.swift */; };
-		BEDDF6212203E2D5005D3B25 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEDDF61F2203E2D5005D3B25 /* Main.storyboard */; };
 		BEDDF6242203E2D5005D3B25 /* CounterList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BEDDF6222203E2D5005D3B25 /* CounterList.xcdatamodeld */; };
 		BEDDF6262203E2D5005D3B25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEDDF6252203E2D5005D3B25 /* Assets.xcassets */; };
 		BEDDF6292203E2D5005D3B25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEDDF6272203E2D5005D3B25 /* LaunchScreen.storyboard */; };
 		BEDDF6342203E2D6005D3B25 /* CounterListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDF6332203E2D6005D3B25 /* CounterListTests.swift */; };
 		BEDDF63F2203E2D6005D3B25 /* CounterListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDF63E2203E2D6005D3B25 /* CounterListUITests.swift */; };
+		BEDDF68B2203EF97005D3B25 /* ProductListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDF68A2203EF97005D3B25 /* ProductListService.swift */; };
+		BEDDF68F2203EFBF005D3B25 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDF68E2203EFBF005D3B25 /* Product.swift */; };
+		BEDDF6942203F21D005D3B25 /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDF6922203F21D005D3B25 /* ProductListViewController.swift */; };
+		BEDDF6952203F21D005D3B25 /* ProductListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEDDF6932203F21D005D3B25 /* ProductListViewController.xib */; };
+		BEDDF6A02203F3B4005D3B25 /* GetProductList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDF69F2203F3B4005D3B25 /* GetProductList.swift */; };
+		BEDDF6A62203F580005D3B25 /* ProductList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDF6A52203F580005D3B25 /* ProductList.swift */; };
+		BEDDF6B22203FB8A005D3B25 /* ServiceLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEDDF6B02203FB82005D3B25 /* ServiceLayer.framework */; };
+		BEDDF6B32203FB8A005D3B25 /* ServiceLayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BEDDF6B02203FB82005D3B25 /* ServiceLayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BEDDF6B822040087005D3B25 /* ProductListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDF6B722040087005D3B25 /* ProductListInteractor.swift */; };
+		BEDDF6BA220400D6005D3B25 /* ProductListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDF6B9220400D6005D3B25 /* ProductListPresenter.swift */; };
+		BEDDF6BC22040110005D3B25 /* ProductListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDF6BB22040110005D3B25 /* ProductListRouter.swift */; };
+		BEDDF6CB2205031B005D3B25 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDF6C92205031B005D3B25 /* ProductTableViewCell.swift */; };
+		BEDDF6CC2205031B005D3B25 /* ProductTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEDDF6CA2205031B005D3B25 /* ProductTableViewCell.xib */; };
+		BEDDF6CF220503AD005D3B25 /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDF6CE220503AD005D3B25 /* UITableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,11 +46,23 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		BEDDF6AF2203F934005D3B25 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				BEDDF6B32203FB8A005D3B25 /* ServiceLayer.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		BEDDF6182203E2D5005D3B25 /* CounterList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CounterList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEDDF61B2203E2D5005D3B25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BEDDF61D2203E2D5005D3B25 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		BEDDF6202203E2D5005D3B25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BEDDF6232203E2D5005D3B25 /* CounterList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CounterList.xcdatamodel; sourceTree = "<group>"; };
 		BEDDF6252203E2D5005D3B25 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BEDDF6282203E2D5005D3B25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +73,19 @@
 		BEDDF63A2203E2D6005D3B25 /* CounterListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CounterListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEDDF63E2203E2D6005D3B25 /* CounterListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterListUITests.swift; sourceTree = "<group>"; };
 		BEDDF6402203E2D6005D3B25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BEDDF68A2203EF97005D3B25 /* ProductListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListService.swift; sourceTree = "<group>"; };
+		BEDDF68E2203EFBF005D3B25 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		BEDDF6922203F21D005D3B25 /* ProductListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewController.swift; sourceTree = "<group>"; };
+		BEDDF6932203F21D005D3B25 /* ProductListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductListViewController.xib; sourceTree = "<group>"; };
+		BEDDF69F2203F3B4005D3B25 /* GetProductList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductList.swift; sourceTree = "<group>"; };
+		BEDDF6A52203F580005D3B25 /* ProductList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductList.swift; sourceTree = "<group>"; };
+		BEDDF6B02203FB82005D3B25 /* ServiceLayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ServiceLayer.framework; sourceTree = "<group>"; };
+		BEDDF6B722040087005D3B25 /* ProductListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListInteractor.swift; sourceTree = "<group>"; };
+		BEDDF6B9220400D6005D3B25 /* ProductListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListPresenter.swift; sourceTree = "<group>"; };
+		BEDDF6BB22040110005D3B25 /* ProductListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListRouter.swift; sourceTree = "<group>"; };
+		BEDDF6C92205031B005D3B25 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
+		BEDDF6CA2205031B005D3B25 /* ProductTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductTableViewCell.xib; sourceTree = "<group>"; };
+		BEDDF6CE220503AD005D3B25 /* UITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEDDF6B22203FB8A005D3B25 /* ServiceLayer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,13 +137,14 @@
 		BEDDF61A2203E2D5005D3B25 /* CounterList */ = {
 			isa = PBXGroup;
 			children = (
+				BEDDF64C2203E2F5005D3B25 /* Common */,
+				BEDDF64D2203E2FC005D3B25 /* Modules */,
 				BEDDF61B2203E2D5005D3B25 /* AppDelegate.swift */,
-				BEDDF61D2203E2D5005D3B25 /* ViewController.swift */,
-				BEDDF61F2203E2D5005D3B25 /* Main.storyboard */,
 				BEDDF6252203E2D5005D3B25 /* Assets.xcassets */,
 				BEDDF6272203E2D5005D3B25 /* LaunchScreen.storyboard */,
 				BEDDF62A2203E2D5005D3B25 /* Info.plist */,
 				BEDDF6222203E2D5005D3B25 /* CounterList.xcdatamodeld */,
+				BEDDF6802203EF26005D3B25 /* Frameworks */,
 			);
 			path = CounterList;
 			sourceTree = "<group>";
@@ -128,6 +167,168 @@
 			path = CounterListUITests;
 			sourceTree = "<group>";
 		};
+		BEDDF64C2203E2F5005D3B25 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				BEDDF6CD2205032E005D3B25 /* Extensions */,
+				BEDDF6BD220405F0005D3B25 /* Router */,
+				BEDDF6A12203F3F3005D3B25 /* Entity */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		BEDDF64D2203E2FC005D3B25 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				BEDDF64E2203E30B005D3B25 /* Counter */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		BEDDF64E2203E30B005D3B25 /* Counter */ = {
+			isa = PBXGroup;
+			children = (
+				BEDDF6872203EF52005D3B25 /* Views */,
+				BEDDF6B422040047005D3B25 /* Interactor */,
+				BEDDF6B52204005A005D3B25 /* Presenter */,
+				BEDDF6832203EF38005D3B25 /* Entity */,
+				BEDDF6B622040066005D3B25 /* Router */,
+			);
+			path = Counter;
+			sourceTree = "<group>";
+		};
+		BEDDF6802203EF26005D3B25 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BEDDF6B02203FB82005D3B25 /* ServiceLayer.framework */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		BEDDF6832203EF38005D3B25 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				BEDDF69E2203F39D005D3B25 /* UseCases */,
+				BEDDF6862203EF48005D3B25 /* Persistance */,
+				BEDDF6852203EF43005D3B25 /* Model */,
+				BEDDF6842203EF3D005D3B25 /* Service */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		BEDDF6842203EF3D005D3B25 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				BEDDF68A2203EF97005D3B25 /* ProductListService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		BEDDF6852203EF43005D3B25 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BEDDF68E2203EFBF005D3B25 /* Product.swift */,
+				BEDDF6A52203F580005D3B25 /* ProductList.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BEDDF6862203EF48005D3B25 /* Persistance */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Persistance;
+			sourceTree = "<group>";
+		};
+		BEDDF6872203EF52005D3B25 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BEDDF6C322050258005D3B25 /* ProductList */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BEDDF69E2203F39D005D3B25 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				BEDDF69F2203F3B4005D3B25 /* GetProductList.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		BEDDF6A12203F3F3005D3B25 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				BEDDF6A22203F3F8005D3B25 /* UseCases */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		BEDDF6A22203F3F8005D3B25 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		BEDDF6B422040047005D3B25 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				BEDDF6B722040087005D3B25 /* ProductListInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		BEDDF6B52204005A005D3B25 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				BEDDF6B9220400D6005D3B25 /* ProductListPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		BEDDF6B622040066005D3B25 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				BEDDF6BB22040110005D3B25 /* ProductListRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		BEDDF6BD220405F0005D3B25 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		BEDDF6C322050258005D3B25 /* ProductList */ = {
+			isa = PBXGroup;
+			children = (
+				BEDDF6C422050262005D3B25 /* Cells */,
+				BEDDF6922203F21D005D3B25 /* ProductListViewController.swift */,
+				BEDDF6932203F21D005D3B25 /* ProductListViewController.xib */,
+			);
+			path = ProductList;
+			sourceTree = "<group>";
+		};
+		BEDDF6C422050262005D3B25 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				BEDDF6C92205031B005D3B25 /* ProductTableViewCell.swift */,
+				BEDDF6CA2205031B005D3B25 /* ProductTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		BEDDF6CD2205032E005D3B25 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BEDDF6CE220503AD005D3B25 /* UITableViewCell.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,6 +339,7 @@
 				BEDDF6142203E2D5005D3B25 /* Sources */,
 				BEDDF6152203E2D5005D3B25 /* Frameworks */,
 				BEDDF6162203E2D5005D3B25 /* Resources */,
+				BEDDF6AF2203F934005D3B25 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -233,8 +435,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEDDF6292203E2D5005D3B25 /* LaunchScreen.storyboard in Resources */,
+				BEDDF6CC2205031B005D3B25 /* ProductTableViewCell.xib in Resources */,
+				BEDDF6952203F21D005D3B25 /* ProductListViewController.xib in Resources */,
 				BEDDF6262203E2D5005D3B25 /* Assets.xcassets in Resources */,
-				BEDDF6212203E2D5005D3B25 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,8 +462,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BEDDF61E2203E2D5005D3B25 /* ViewController.swift in Sources */,
+				BEDDF68B2203EF97005D3B25 /* ProductListService.swift in Sources */,
+				BEDDF6BA220400D6005D3B25 /* ProductListPresenter.swift in Sources */,
 				BEDDF6242203E2D5005D3B25 /* CounterList.xcdatamodeld in Sources */,
+				BEDDF6A02203F3B4005D3B25 /* GetProductList.swift in Sources */,
+				BEDDF6BC22040110005D3B25 /* ProductListRouter.swift in Sources */,
+				BEDDF6942203F21D005D3B25 /* ProductListViewController.swift in Sources */,
+				BEDDF6A62203F580005D3B25 /* ProductList.swift in Sources */,
+				BEDDF6CB2205031B005D3B25 /* ProductTableViewCell.swift in Sources */,
+				BEDDF68F2203EFBF005D3B25 /* Product.swift in Sources */,
+				BEDDF6CF220503AD005D3B25 /* UITableViewCell.swift in Sources */,
+				BEDDF6B822040087005D3B25 /* ProductListInteractor.swift in Sources */,
 				BEDDF61C2203E2D5005D3B25 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,14 +509,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		BEDDF61F2203E2D5005D3B25 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BEDDF6202203E2D5005D3B25 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		BEDDF6272203E2D5005D3B25 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -438,6 +642,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2RB6P5XQBG;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CounterList/Frameworks",
+				);
 				INFOPLIST_FILE = CounterList/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -456,6 +664,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2RB6P5XQBG;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CounterList/Frameworks",
+				);
 				INFOPLIST_FILE = CounterList/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
