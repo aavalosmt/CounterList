@@ -27,6 +27,12 @@
 		BEDDF6CB2205031B005D3B25 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDF6C92205031B005D3B25 /* ProductTableViewCell.swift */; };
 		BEDDF6CC2205031B005D3B25 /* ProductTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEDDF6CA2205031B005D3B25 /* ProductTableViewCell.xib */; };
 		BEDDF6CF220503AD005D3B25 /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDF6CE220503AD005D3B25 /* UITableViewCell.swift */; };
+		BEDDF6D222050486005D3B25 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDF6D122050486005D3B25 /* BaseViewController.swift */; };
+		BEDDF6D522050510005D3B25 /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDF6D422050510005D3B25 /* Analytics.swift */; };
+		BEDDF6D8220508CC005D3B25 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDF6D7220508CC005D3B25 /* Theme.swift */; };
+		BEDDF6DA22050BB4005D3B25 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDF6D922050BB4005D3B25 /* UIView.swift */; };
+		BEDDF6DE220512C6005D3B25 /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDF6DD220512C6005D3B25 /* ProductViewModel.swift */; };
+		BEDDF6E122051BED005D3B25 /* Assembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDF6E022051BED005D3B25 /* Assembler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +92,12 @@
 		BEDDF6C92205031B005D3B25 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
 		BEDDF6CA2205031B005D3B25 /* ProductTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductTableViewCell.xib; sourceTree = "<group>"; };
 		BEDDF6CE220503AD005D3B25 /* UITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCell.swift; sourceTree = "<group>"; };
+		BEDDF6D122050486005D3B25 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		BEDDF6D422050510005D3B25 /* Analytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Analytics.swift; sourceTree = "<group>"; };
+		BEDDF6D7220508CC005D3B25 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		BEDDF6D922050BB4005D3B25 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		BEDDF6DD220512C6005D3B25 /* ProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
+		BEDDF6E022051BED005D3B25 /* Assembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +182,10 @@
 		BEDDF64C2203E2F5005D3B25 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				BEDDF6DF22051BE0005D3B25 /* Assembler */,
+				BEDDF6D6220508BF005D3B25 /* Theme */,
+				BEDDF6D322050506005D3B25 /* Analytics */,
+				BEDDF6D022050478005D3B25 /* Views */,
 				BEDDF6CD2205032E005D3B25 /* Extensions */,
 				BEDDF6BD220405F0005D3B25 /* Router */,
 				BEDDF6A12203F3F3005D3B25 /* Entity */,
@@ -305,6 +321,7 @@
 		BEDDF6C322050258005D3B25 /* ProductList */ = {
 			isa = PBXGroup;
 			children = (
+				BEDDF6DC220512BB005D3B25 /* ViewModel */,
 				BEDDF6C422050262005D3B25 /* Cells */,
 				BEDDF6922203F21D005D3B25 /* ProductListViewController.swift */,
 				BEDDF6932203F21D005D3B25 /* ProductListViewController.xib */,
@@ -325,8 +342,49 @@
 			isa = PBXGroup;
 			children = (
 				BEDDF6CE220503AD005D3B25 /* UITableViewCell.swift */,
+				BEDDF6D922050BB4005D3B25 /* UIView.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		BEDDF6D022050478005D3B25 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BEDDF6D122050486005D3B25 /* BaseViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BEDDF6D322050506005D3B25 /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				BEDDF6D422050510005D3B25 /* Analytics.swift */,
+			);
+			path = Analytics;
+			sourceTree = "<group>";
+		};
+		BEDDF6D6220508BF005D3B25 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				BEDDF6D7220508CC005D3B25 /* Theme.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		BEDDF6DC220512BB005D3B25 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				BEDDF6DD220512C6005D3B25 /* ProductViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		BEDDF6DF22051BE0005D3B25 /* Assembler */ = {
+			isa = PBXGroup;
+			children = (
+				BEDDF6E022051BED005D3B25 /* Assembler.swift */,
+			);
+			path = Assembler;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -462,16 +520,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEDDF6DE220512C6005D3B25 /* ProductViewModel.swift in Sources */,
+				BEDDF6DA22050BB4005D3B25 /* UIView.swift in Sources */,
+				BEDDF6D222050486005D3B25 /* BaseViewController.swift in Sources */,
 				BEDDF68B2203EF97005D3B25 /* ProductListService.swift in Sources */,
+				BEDDF6E122051BED005D3B25 /* Assembler.swift in Sources */,
 				BEDDF6BA220400D6005D3B25 /* ProductListPresenter.swift in Sources */,
 				BEDDF6242203E2D5005D3B25 /* CounterList.xcdatamodeld in Sources */,
 				BEDDF6A02203F3B4005D3B25 /* GetProductList.swift in Sources */,
 				BEDDF6BC22040110005D3B25 /* ProductListRouter.swift in Sources */,
 				BEDDF6942203F21D005D3B25 /* ProductListViewController.swift in Sources */,
 				BEDDF6A62203F580005D3B25 /* ProductList.swift in Sources */,
+				BEDDF6D522050510005D3B25 /* Analytics.swift in Sources */,
 				BEDDF6CB2205031B005D3B25 /* ProductTableViewCell.swift in Sources */,
 				BEDDF68F2203EFBF005D3B25 /* Product.swift in Sources */,
 				BEDDF6CF220503AD005D3B25 /* UITableViewCell.swift in Sources */,
+				BEDDF6D8220508CC005D3B25 /* Theme.swift in Sources */,
 				BEDDF6B822040087005D3B25 /* ProductListInteractor.swift in Sources */,
 				BEDDF61C2203E2D5005D3B25 /* AppDelegate.swift in Sources */,
 			);

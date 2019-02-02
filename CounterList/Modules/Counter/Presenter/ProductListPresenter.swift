@@ -35,7 +35,7 @@ class ProductListPresenter: ProductListPresenterProtocol {
 
 extension ProductListPresenter: ProductListOutputInteractorProtocol {
     
-    func productListDidFetch(productList: [Product]) {
+    func productListDidFetch(productList: [ProductViewModelProtocol]) {
         view?.showProducts(with: productList)
     }
     

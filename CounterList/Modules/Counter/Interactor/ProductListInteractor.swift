@@ -18,16 +18,19 @@ protocol ProductListInputInteractorProtocol: class {
 
 protocol ProductListOutputInteractorProtocol: class {
     //Interactor -> Presenter
-    func productListDidFetch(productList: [Product])
+    func productListDidFetch(productList: [ProductViewModelProtocol])
 }
 
 class ProductListInteractor: ProductListInputInteractorProtocol {
     
     weak var presenter: ProductListOutputInteractorProtocol?
+    private let assembler: ProductViewModelAssembler<ProductEntity, ProductViewModel>
     var useCase: GetProductList?
     
-    init(useCase: GetProductList) {
+    init(useCase: GetProductList,
+         assembler: ProductViewModelAssembler<ProductEntity, ProductViewModel> = ProductViewModelAssembler<ProductEntity, ProductViewModel>()) {
         self.useCase = useCase
+        self.assembler = assembler
     }
     
     func getProductList() {
@@ -36,7 +39,10 @@ class ProductListInteractor: ProductListInputInteractorProtocol {
             guard let self = self else { return }
             switch response {
             case .success(let products):
-                self.presenter?.productListDidFetch(productList: products)
+                let productList = products.compactMap({
+                    self.assembler.getObject(fromObject: $0, type: ProductEntity.self)
+                })
+                self.presenter?.productListDidFetch(productList: productList)
             case .failure(let error):
                 print(error)
             }
