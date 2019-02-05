@@ -9,8 +9,9 @@
 import UIKit
 
 protocol ProductListViewProtocol: class {
-    func showProducts(with products: [ProductListViewModelProtocol])
+    func showProducts(with products: [ProductListViewModelProtocol], indices: [Int])
     func showError(with error: Error)
+    func didUpdateCounter(id: String, count: Int)
 }
 
 class ProductListViewController: BaseViewController {
@@ -21,10 +22,11 @@ class ProductListViewController: BaseViewController {
     
     var presenter: ProductListPresenterProtocol?
     var viewModels = [ProductListViewModelProtocol]()
+    
+    // MARK: - ViewController Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        ProductListRouter.createProductListModule(productListRef: self)
         presenter?.viewDidLoad()
     }
     
@@ -63,12 +65,19 @@ class ProductListViewController: BaseViewController {
 
 extension ProductListViewController: ProductListViewProtocol {
     
-    func showProducts(with products: [ProductListViewModelProtocol]) {
+    func showProducts(with products: [ProductListViewModelProtocol], indices: [Int]) {
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
+            let oldCount = self.viewModels.count
+            let indices = indices.map({ IndexPath(row: $0, section: 0) })
             self.viewModels = products
-            self.tableView.reloadData()
-            print(products)
+            if oldCount < products.count {
+                self.tableView.insertRows(at: indices, with: .automatic)
+            } else if oldCount > products.count {
+                self.tableView.deleteRows(at: indices, with: .automatic)
+            } else {
+                self.tableView.reloadData()
+            }
         }
     }
     
@@ -76,6 +85,21 @@ extension ProductListViewController: ProductListViewProtocol {
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
             self.presentAlert(body: error.localizedDescription)
+        }
+    }
+    
+    func didUpdateCounter(id: String, count: Int) {
+        guard let index = viewModels.compactMap({ $0 as? ProductViewModelProtocol }).firstIndex(where: { $0.id == id }) else { return }
+        
+        // Will never crash because compact mapped
+        let product = viewModels[index] as! ProductViewModelProtocol
+        viewModels[index] = product.withCount(count: count)
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            guard let visibleCellPaths = self.tableView.indexPathsForVisibleRows else { return }
+            if visibleCellPaths.contains(IndexPath(row: index, section: 0)) {
+                self.tableView.reloadRows(at: [IndexPath(row: index, section: 0)], with: .none)
+            }
         }
     }
     
@@ -109,11 +133,17 @@ extension ProductListViewController: UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
-        let delete = UITableViewRowAction(style: .destructive, title: "PRODUCT_LIST_CELL_ACTION_DELETE".localized()) { (action, indexPath) in
-            guard let product = self.viewModels[indexPath.row] as? ProductViewModelProtocol else { return }
-            self.presenter?.deleteProduct(id: product.id)
+        let model = viewModels[indexPath.row]
+        switch model.type {
+        case .total:
+            return []
+        case .product:
+            let delete = UITableViewRowAction(style: .destructive, title: "PRODUCT_LIST_CELL_ACTION_DELETE".localized()) { (action, indexPath) in
+                guard let product = self.viewModels[indexPath.row] as? ProductViewModelProtocol else { return }
+                self.presenter?.deleteProduct(id: product.id)
+            }
+            return [delete]
         }
-        return [delete]
     }
     
     private func getProductTableViewCell(_ tableView: UITableView, indexPath: IndexPath) -> UITableViewCell {
@@ -140,12 +170,12 @@ extension ProductListViewController: UITableViewDelegate, UITableViewDataSource 
 
 extension ProductListViewController: ProductTableViewCellDelegate {
     
-    func didIncrement(id: String) {
-        presenter?.incrementCounter(id: id)
+    func cellIncrement(id: String, count: Int) {
+        presenter?.incrementCounter(id: id, count: count)
     }
     
-    func didDecrement(id: String) {
-        presenter?.decrementCounter(id: id)
+    func cellDecrement(id: String, count: Int) {
+        presenter?.decrementCounter(id: id, count: count)
     }
     
 }

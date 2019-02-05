@@ -23,14 +23,20 @@ class ProductTotalTableViewCell: UITableViewCell {
         configureTheme()
     }
     
-    func configureStrings() {
+    // MARK: - Strings
+    
+    private func configureStrings() {
         totalLabel.text = "PRODUCT_LIST_CELL_TOTAL_TITLE".localized()
     }
     
-    func configureTheme() {
+    // MARK: - Themeing
+    
+    private func configureTheme() {
         totalLabel.font = UIFont(name: theme.fonts.regular, size: theme.fontSizes.label)
         counterLabel.font = UIFont(name: theme.fonts.bold, size: theme.fontSizes.label)
     }
+    
+    // MARK: - Data configuration
     
     func configure(with model: ProductTotalViewModelProtocol) {
         counterLabel.text = String(model.total)

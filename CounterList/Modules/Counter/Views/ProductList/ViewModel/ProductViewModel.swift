@@ -20,17 +20,26 @@ protocol ProductListViewModelProtocol {
 protocol ProductViewModelProtocol: ProductListViewModelProtocol {
     var id: String { get }
     var title: String { get }
-    var count: Int { get }
+    var count: Int { get set }
+    func withCount(count: Int) -> ProductViewModelProtocol
 }
 
 // Class for representing displayable data apart from the ProductEntity which is a Model Layer entity
 // Even as an entity might have the exact same code as another one, this should be considered coincidence, as their reason to change are completely different (Single responsibility principle).
 
-struct ProductViewModel: ProductViewModelProtocol {
+struct ProductViewModel: ProductViewModelProtocol, Equatable {
     var type: ProductListViewModelType
     var id: String
     var title: String
     var count: Int
+    
+    public static func ==(lhs: ProductViewModel, rhs: ProductViewModel) -> Bool {
+        return lhs.id == rhs.id
+    }
+    
+    func withCount(count: Int) -> ProductViewModelProtocol {
+        return ProductViewModel(type: type, id: id, title: title, count: count)
+    }
 }
 
 // Generates ProductViewModelProtocol object from different object types

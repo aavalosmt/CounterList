@@ -12,6 +12,10 @@ protocol IncrementProductService {
     func incrementProduct(id: String, completion: @escaping ServiceResponseClosure)
 }
 
+// Seems like backend service could be modified to receive the count and avoid incrementing or decrementing by 1
+// If that was the case we could debounce the calls in presenter or interactor layer
+// TODO: - Extend service layer to enqueue service calls in an operation queue maybe
+
 class IncrementProductWebService: BaseService<[Product]>, IncrementProductService {
     
     enum Keys: String {

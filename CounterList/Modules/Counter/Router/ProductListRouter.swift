@@ -10,18 +10,15 @@ import Foundation
 import UIKit
 
 protocol ProductListRouterProtocol: class {
-    static func createProductListModule(productListRef: ProductListViewController)
+    static func createModule() -> UIViewController
 }
 
 class ProductListRouter: ProductListRouterProtocol {
     
-    static func createProductListModule(productListRef: ProductListViewController) {
-        let presenter: ProductListPresenterProtocol & ProductListOutputInteractorProtocol = ProductListPresenter()
+    static func createModule() -> UIViewController {
+        let view = ProductListViewController()
         
-        productListRef.presenter = presenter
-        productListRef.presenter?.router = ProductListRouter()
-        productListRef.presenter?.view = productListRef
-        productListRef.presenter?.interactor = ProductListInteractor(
+        let interactor = ProductListInteractor(
             addProductUseCase: AddProductImpl(
                 service: AddProductWebService()
             ),
@@ -38,7 +35,13 @@ class ProductListRouter: ProductListRouterProtocol {
                 service: DeleteProductWebService()
             )
         )
-        productListRef.presenter?.interactor?.presenter = presenter
+        let router = ProductListRouter()
+        
+        let presenter: ProductListPresenterProtocol & ProductListOutputInteractorProtocol = ProductListPresenter(interactor: interactor, router: router, view: view)
+        
+        view.presenter = presenter
+        
+        return view
     }
     
 }

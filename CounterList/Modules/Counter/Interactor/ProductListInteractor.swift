@@ -20,8 +20,8 @@ protocol ProductListInputInteractorProtocol: class {
     //Presenter -> Interactor
     func getProductList()
     func addProduct(title: String)
-    func incrementCounter(id: String)
-    func decrementCounter(id: String)
+    func incrementCounter(id: String, count: Int)
+    func decrementCounter(id: String, count: Int)
     func deleteProduct(id: String)
 }
 
@@ -29,6 +29,7 @@ protocol ProductListOutputInteractorProtocol: class {
     //Interactor -> Presenter
     func productListDidFetch(productList: [ProductViewModelProtocol])
     func productListDidFailed(with error: Error)
+    func counterDidUpdate(id: String, count: Int)
 }
 
 class ProductListInteractor: ProductListInputInteractorProtocol {
@@ -71,17 +72,17 @@ class ProductListInteractor: ProductListInputInteractorProtocol {
         }
     }
     
-    func incrementCounter(id: String) {
-        incrementProductCounterUseCase?.execute(id: id, completion: { [weak self] response in
+    func incrementCounter(id: String, count: Int) {
+        incrementProductCounterUseCase?.execute(id: id, completion: { [weak self, id] response in
             guard let self = self else { return }
-            self.handleProductResponse(response: response)
+            self.handleCounterResponse(response: response, id: id, count: count)
         })
     }
     
-    func decrementCounter(id: String) {
-        decrementProductCounterUseCase?.execute(id: id, completion: { [weak self] response in
+    func decrementCounter(id: String, count: Int) {
+        decrementProductCounterUseCase?.execute(id: id, completion: { [weak self, id] response in
             guard let self = self else { return }
-            self.handleProductResponse(response: response)
+            self.handleCounterResponse(response: response, id: id, count: count)
         })
     }
     
@@ -90,6 +91,15 @@ class ProductListInteractor: ProductListInputInteractorProtocol {
             guard let self = self else { return }
             self.handleProductResponse(response: response)
         })
+    }
+    
+    func handleCounterResponse(response: ProductListResponse, id: String, count: Int) {
+        switch response {
+        case .success:
+            presenter?.counterDidUpdate(id: id, count: count)
+        case .failure(let error):
+            presenter?.productListDidFailed(with: error)
+        }
     }
     
     func handleProductResponse(response: ProductListResponse) {

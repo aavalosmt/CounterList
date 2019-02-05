@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		BEDDF61C2203E2D5005D3B25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDF61B2203E2D5005D3B25 /* AppDelegate.swift */; };
-		BEDDF6242203E2D5005D3B25 /* CounterList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BEDDF6222203E2D5005D3B25 /* CounterList.xcdatamodeld */; };
 		BEDDF6262203E2D5005D3B25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEDDF6252203E2D5005D3B25 /* Assets.xcassets */; };
 		BEDDF6292203E2D5005D3B25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEDDF6272203E2D5005D3B25 /* LaunchScreen.storyboard */; };
 		BEDDF6342203E2D6005D3B25 /* CounterListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDF6332203E2D6005D3B25 /* CounterListTests.swift */; };
@@ -51,6 +50,13 @@
 		BEDDF714220921A0005D3B25 /* ProductListViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDF713220921A0005D3B25 /* ProductListViewModelFactory.swift */; };
 		BEDDF71722092379005D3B25 /* ProductTotalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDF71522092379005D3B25 /* ProductTotalTableViewCell.swift */; };
 		BEDDF71822092379005D3B25 /* ProductTotalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEDDF71622092379005D3B25 /* ProductTotalTableViewCell.xib */; };
+		BEDDF71A220928B7005D3B25 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDF719220928B7005D3B25 /* Array.swift */; };
+		BEDDF71C22092B5C005D3B25 /* ArrayExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDF71B22092B5C005D3B25 /* ArrayExtensionTests.swift */; };
+		BEDDF72022094CC6005D3B25 /* ProductListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDF71F22094CC6005D3B25 /* ProductListPresenterTests.swift */; };
+		BEDDF72322094D08005D3B25 /* ProductListRouterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDF72222094D08005D3B25 /* ProductListRouterMock.swift */; };
+		BEDDF72522094E1C005D3B25 /* ProductListInteractorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDF72422094E1C005D3B25 /* ProductListInteractorMock.swift */; };
+		BEDDF7272209506E005D3B25 /* ProductListViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDF7262209506E005D3B25 /* ProductListViewMock.swift */; };
+		BEDDF72922095378005D3B25 /* ProductListServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDF72822095378005D3B25 /* ProductListServiceTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,7 +92,6 @@
 /* Begin PBXFileReference section */
 		BEDDF6182203E2D5005D3B25 /* CounterList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CounterList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEDDF61B2203E2D5005D3B25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BEDDF6232203E2D5005D3B25 /* CounterList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CounterList.xcdatamodel; sourceTree = "<group>"; };
 		BEDDF6252203E2D5005D3B25 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BEDDF6282203E2D5005D3B25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BEDDF62A2203E2D5005D3B25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -134,6 +139,13 @@
 		BEDDF713220921A0005D3B25 /* ProductListViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewModelFactory.swift; sourceTree = "<group>"; };
 		BEDDF71522092379005D3B25 /* ProductTotalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTotalTableViewCell.swift; sourceTree = "<group>"; };
 		BEDDF71622092379005D3B25 /* ProductTotalTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductTotalTableViewCell.xib; sourceTree = "<group>"; };
+		BEDDF719220928B7005D3B25 /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
+		BEDDF71B22092B5C005D3B25 /* ArrayExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtensionTests.swift; sourceTree = "<group>"; };
+		BEDDF71F22094CC6005D3B25 /* ProductListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListPresenterTests.swift; sourceTree = "<group>"; };
+		BEDDF72222094D08005D3B25 /* ProductListRouterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListRouterMock.swift; sourceTree = "<group>"; };
+		BEDDF72422094E1C005D3B25 /* ProductListInteractorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListInteractorMock.swift; sourceTree = "<group>"; };
+		BEDDF7262209506E005D3B25 /* ProductListViewMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewMock.swift; sourceTree = "<group>"; };
+		BEDDF72822095378005D3B25 /* ProductListServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListServiceTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,7 +201,6 @@
 				BEDDF61B2203E2D5005D3B25 /* AppDelegate.swift */,
 				BEDDF6272203E2D5005D3B25 /* LaunchScreen.storyboard */,
 				BEDDF62A2203E2D5005D3B25 /* Info.plist */,
-				BEDDF6222203E2D5005D3B25 /* CounterList.xcdatamodeld */,
 				BEDDF6802203EF26005D3B25 /* Frameworks */,
 			);
 			path = CounterList;
@@ -198,6 +209,8 @@
 		BEDDF6322203E2D6005D3B25 /* CounterListTests */ = {
 			isa = PBXGroup;
 			children = (
+				BEDDF71E22094CB4005D3B25 /* CommonTests */,
+				BEDDF71D22094CA8005D3B25 /* ProductListTests */,
 				BEDDF6332203E2D6005D3B25 /* CounterListTests.swift */,
 				BEDDF6352203E2D6005D3B25 /* Info.plist */,
 			);
@@ -358,6 +371,7 @@
 				BEDDF6CE220503AD005D3B25 /* UITableViewCell.swift */,
 				BEDDF6D922050BB4005D3B25 /* UIView.swift */,
 				BEDDF70722090BF9005D3B25 /* String.swift */,
+				BEDDF719220928B7005D3B25 /* Array.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -423,6 +437,34 @@
 				BEDDF70D2209199E005D3B25 /* EndpointManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		BEDDF71D22094CA8005D3B25 /* ProductListTests */ = {
+			isa = PBXGroup;
+			children = (
+				BEDDF72122094CEB005D3B25 /* Mocks */,
+				BEDDF71F22094CC6005D3B25 /* ProductListPresenterTests.swift */,
+				BEDDF72822095378005D3B25 /* ProductListServiceTests.swift */,
+			);
+			path = ProductListTests;
+			sourceTree = "<group>";
+		};
+		BEDDF71E22094CB4005D3B25 /* CommonTests */ = {
+			isa = PBXGroup;
+			children = (
+				BEDDF71B22092B5C005D3B25 /* ArrayExtensionTests.swift */,
+			);
+			path = CommonTests;
+			sourceTree = "<group>";
+		};
+		BEDDF72122094CEB005D3B25 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				BEDDF72222094D08005D3B25 /* ProductListRouterMock.swift */,
+				BEDDF72422094E1C005D3B25 /* ProductListInteractorMock.swift */,
+				BEDDF7262209506E005D3B25 /* ProductListViewMock.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -570,8 +612,8 @@
 				BEDDF68B2203EF97005D3B25 /* ProductListService.swift in Sources */,
 				BEDDF71722092379005D3B25 /* ProductTotalTableViewCell.swift in Sources */,
 				BEDDF6E122051BED005D3B25 /* Assembler.swift in Sources */,
+				BEDDF71A220928B7005D3B25 /* Array.swift in Sources */,
 				BEDDF6BA220400D6005D3B25 /* ProductListPresenter.swift in Sources */,
-				BEDDF6242203E2D5005D3B25 /* CounterList.xcdatamodeld in Sources */,
 				BEDDF6E82208F789005D3B25 /* IncrementProductService.swift in Sources */,
 				BEDDF6A02203F3B4005D3B25 /* GetProductList.swift in Sources */,
 				BEDDF6BC22040110005D3B25 /* ProductListRouter.swift in Sources */,
@@ -603,7 +645,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEDDF72522094E1C005D3B25 /* ProductListInteractorMock.swift in Sources */,
 				BEDDF6342203E2D6005D3B25 /* CounterListTests.swift in Sources */,
+				BEDDF71C22092B5C005D3B25 /* ArrayExtensionTests.swift in Sources */,
+				BEDDF72322094D08005D3B25 /* ProductListRouterMock.swift in Sources */,
+				BEDDF72922095378005D3B25 /* ProductListServiceTests.swift in Sources */,
+				BEDDF7272209506E005D3B25 /* ProductListViewMock.swift in Sources */,
+				BEDDF72022094CC6005D3B25 /* ProductListPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -932,19 +980,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		BEDDF6222203E2D5005D3B25 /* CounterList.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				BEDDF6232203E2D5005D3B25 /* CounterList.xcdatamodel */,
-			);
-			currentVersion = BEDDF6232203E2D5005D3B25 /* CounterList.xcdatamodel */;
-			path = CounterList.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = BEDDF6102203E2D5005D3B25 /* Project object */;
 }

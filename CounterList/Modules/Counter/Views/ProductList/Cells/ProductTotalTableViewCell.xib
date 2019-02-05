@@ -19,7 +19,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XFW-6Y-ap1">
-                        <rect key="frame" x="16" y="11.5" width="42" height="20.5"/>
+                        <rect key="frame" x="16" y="15" width="42" height="13.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -32,6 +32,8 @@
                     </label>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="bottomMargin" secondItem="XFW-6Y-ap1" secondAttribute="bottom" priority="999" constant="15" id="8II-BB-UIL"/>
+                    <constraint firstItem="XFW-6Y-ap1" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="X4s-BY-Iiv"/>
                     <constraint firstItem="bNI-w0-okN" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="XFW-6Y-ap1" secondAttribute="trailing" constant="8" id="ZUV-di-Xy2"/>
                     <constraint firstItem="XFW-6Y-ap1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="ieL-pr-338"/>
                     <constraint firstItem="XFW-6Y-ap1" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="nBl-q3-yDS"/>

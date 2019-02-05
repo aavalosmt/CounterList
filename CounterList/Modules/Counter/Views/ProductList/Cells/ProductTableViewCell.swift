@@ -9,8 +9,8 @@
 import UIKit
 
 protocol ProductTableViewCellDelegate: class {
-    func didIncrement(id: String)
-    func didDecrement(id: String)
+    func cellIncrement(id: String, count: Int)
+    func cellDecrement(id: String, count: Int)
 }
 
 class ProductTableViewCell: UITableViewCell {
@@ -69,12 +69,10 @@ class ProductTableViewCell: UITableViewCell {
             return
         }
         if newValue < oldCounter {
-            delegate?.didDecrement(id: id)
+            delegate?.cellDecrement(id: id, count: newValue)
         } else if newValue > oldCounter {
-            delegate?.didIncrement(id: id)
+            delegate?.cellIncrement(id: id, count: newValue)
         }
-        productCounterLabel.text = String(newValue)
-        oldCounter = newValue
     }
     
 }
