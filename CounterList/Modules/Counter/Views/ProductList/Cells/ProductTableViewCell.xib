@@ -26,6 +26,9 @@
                     </label>
                     <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Odd-tb-WnT">
                         <rect key="frame" x="210" y="15" width="94" height="29"/>
+                        <connections>
+                            <action selector="stepperValueDidChange:" destination="KGk-i7-Jjw" eventType="valueChanged" id="L8e-Bu-GkA"/>
+                        </connections>
                     </stepper>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oyz-X2-wOE">
                         <rect key="frame" x="191" y="19" width="11" height="21"/>

@@ -10,6 +10,7 @@ import UIKit
 
 protocol ProductListViewProtocol: class {
     func showProducts(with products: [ProductViewModelProtocol])
+    func showError(with error: Error)
 }
 
 class ProductListViewController: BaseViewController {
@@ -24,8 +25,36 @@ class ProductListViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         ProductListRouter.createProductListModule(productListRef: self)
-        configureTableView()
         presenter?.viewDidLoad()
+    }
+    
+    override func configureUI() {
+        super.configureUI()
+        title = "PRODUCT_LIST_TITLE".localized()
+        addBarButtonItem()
+        configureTableView()
+    }
+    
+    private func addBarButtonItem() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "PRODUCT_LIST_BAR_ACTION_ADD".localized(), style: .plain, target: self, action: #selector(addTapped))
+    }
+    
+    @objc private func addTapped() {
+        presentAlertController(
+            title: "PRODUCT_LIST_ALERT_ADD_TITLE".localized(),
+            description: "PRODUCT_LIST_ALERT_ADD_DESCRIPTION".localized(),
+            textFieldTitle: "PRODUCT_LIST_ALERT_ADD_TEXTFIELD".localized(),
+            completion: { [weak self] name in
+                guard let self = self else { return }
+                self.addProduct(name: name)
+            },
+            cancelationHandler: nil
+        )
+    }
+    
+    private func addProduct(name: String?) {
+        guard let name = name, !name.isEmpty else { return }
+        presenter?.addProduct(title: name)
     }
 
 }
@@ -40,6 +69,13 @@ extension ProductListViewController: ProductListViewProtocol {
             self.productList = products
             self.tableView.reloadData()
             print(products)
+        }
+    }
+    
+    func showError(with error: Error) {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            self.presentAlert(body: error.localizedDescription)
         }
     }
     
@@ -67,7 +103,29 @@ extension ProductListViewController: UITableViewDelegate, UITableViewDataSource 
         }
         let model = productList[indexPath.row]
         cell.configure(with: model)
+        cell.delegate = self
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let delete = UITableViewRowAction(style: .destructive, title: "PRODUCT_LIST_CELL_ACTION_DELETE".localized()) { (action, indexPath) in
+            let product = self.productList[indexPath.row]
+            self.presenter?.deleteProduct(id: product.id)
+        }
+        return [delete]
+    }
+}
+
+// MARK: - ProductTableViewCellDelegate
+
+extension ProductListViewController: ProductTableViewCellDelegate {
+    
+    func didIncrement(id: String) {
+        presenter?.incrementCounter(id: id)
+    }
+    
+    func didDecrement(id: String) {
+        presenter?.decrementCounter(id: id)
     }
     
 }

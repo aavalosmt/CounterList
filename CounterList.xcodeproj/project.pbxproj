@@ -19,8 +19,6 @@
 		BEDDF6952203F21D005D3B25 /* ProductListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEDDF6932203F21D005D3B25 /* ProductListViewController.xib */; };
 		BEDDF6A02203F3B4005D3B25 /* GetProductList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDF69F2203F3B4005D3B25 /* GetProductList.swift */; };
 		BEDDF6A62203F580005D3B25 /* ProductList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDF6A52203F580005D3B25 /* ProductList.swift */; };
-		BEDDF6B22203FB8A005D3B25 /* ServiceLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEDDF6B02203FB82005D3B25 /* ServiceLayer.framework */; };
-		BEDDF6B32203FB8A005D3B25 /* ServiceLayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BEDDF6B02203FB82005D3B25 /* ServiceLayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BEDDF6B822040087005D3B25 /* ProductListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDF6B722040087005D3B25 /* ProductListInteractor.swift */; };
 		BEDDF6BA220400D6005D3B25 /* ProductListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDF6B9220400D6005D3B25 /* ProductListPresenter.swift */; };
 		BEDDF6BC22040110005D3B25 /* ProductListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDF6BB22040110005D3B25 /* ProductListRouter.swift */; };
@@ -28,11 +26,25 @@
 		BEDDF6CC2205031B005D3B25 /* ProductTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEDDF6CA2205031B005D3B25 /* ProductTableViewCell.xib */; };
 		BEDDF6CF220503AD005D3B25 /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDF6CE220503AD005D3B25 /* UITableViewCell.swift */; };
 		BEDDF6D222050486005D3B25 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDF6D122050486005D3B25 /* BaseViewController.swift */; };
-		BEDDF6D522050510005D3B25 /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDF6D422050510005D3B25 /* Analytics.swift */; };
 		BEDDF6D8220508CC005D3B25 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDF6D7220508CC005D3B25 /* Theme.swift */; };
 		BEDDF6DA22050BB4005D3B25 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDF6D922050BB4005D3B25 /* UIView.swift */; };
 		BEDDF6DE220512C6005D3B25 /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDF6DD220512C6005D3B25 /* ProductViewModel.swift */; };
 		BEDDF6E122051BED005D3B25 /* Assembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDF6E022051BED005D3B25 /* Assembler.swift */; };
+		BEDDF6E62208F6D1005D3B25 /* IncrementProductCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDF6E52208F6D1005D3B25 /* IncrementProductCounter.swift */; };
+		BEDDF6E82208F789005D3B25 /* IncrementProductService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDF6E72208F789005D3B25 /* IncrementProductService.swift */; };
+		BEDDF6EE2208FBE4005D3B25 /* DecrementProductCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDF6ED2208FBE4005D3B25 /* DecrementProductCounter.swift */; };
+		BEDDF6F02208FC02005D3B25 /* DecrementProductService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDF6EF2208FC02005D3B25 /* DecrementProductService.swift */; };
+		BEDDF6F42208FF84005D3B25 /* BaseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDF6F22208FF84005D3B25 /* BaseParser.swift */; };
+		BEDDF6F52208FF84005D3B25 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDF6F32208FF84005D3B25 /* BaseService.swift */; };
+		BEDDF6F722090184005D3B25 /* ContentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDF6F622090184005D3B25 /* ContentType.swift */; };
+		BEDDF6F92209029E005D3B25 /* DeleteProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDF6F82209029E005D3B25 /* DeleteProduct.swift */; };
+		BEDDF6FB220903CE005D3B25 /* DeleteProductService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDF6FA220903CE005D3B25 /* DeleteProductService.swift */; };
+		BEDDF6FF22090AA7005D3B25 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BEDDF70122090AA7005D3B25 /* Localizable.strings */; };
+		BEDDF70422090B29005D3B25 /* LocalizationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDF70322090B29005D3B25 /* LocalizationManager.swift */; };
+		BEDDF70622090BBC005D3B25 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDF70522090BBC005D3B25 /* AppConstants.swift */; };
+		BEDDF70822090BF9005D3B25 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDF70722090BF9005D3B25 /* String.swift */; };
+		BEDDF70A22091364005D3B25 /* AddProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDF70922091364005D3B25 /* AddProduct.swift */; };
+		BEDDF70C2209139B005D3B25 /* AddProductService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDF70B2209139B005D3B25 /* AddProductService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,7 +71,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				BEDDF6B32203FB8A005D3B25 /* ServiceLayer.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -85,7 +96,6 @@
 		BEDDF6932203F21D005D3B25 /* ProductListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductListViewController.xib; sourceTree = "<group>"; };
 		BEDDF69F2203F3B4005D3B25 /* GetProductList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductList.swift; sourceTree = "<group>"; };
 		BEDDF6A52203F580005D3B25 /* ProductList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductList.swift; sourceTree = "<group>"; };
-		BEDDF6B02203FB82005D3B25 /* ServiceLayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ServiceLayer.framework; sourceTree = "<group>"; };
 		BEDDF6B722040087005D3B25 /* ProductListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListInteractor.swift; sourceTree = "<group>"; };
 		BEDDF6B9220400D6005D3B25 /* ProductListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListPresenter.swift; sourceTree = "<group>"; };
 		BEDDF6BB22040110005D3B25 /* ProductListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListRouter.swift; sourceTree = "<group>"; };
@@ -93,11 +103,25 @@
 		BEDDF6CA2205031B005D3B25 /* ProductTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductTableViewCell.xib; sourceTree = "<group>"; };
 		BEDDF6CE220503AD005D3B25 /* UITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCell.swift; sourceTree = "<group>"; };
 		BEDDF6D122050486005D3B25 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		BEDDF6D422050510005D3B25 /* Analytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Analytics.swift; sourceTree = "<group>"; };
 		BEDDF6D7220508CC005D3B25 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		BEDDF6D922050BB4005D3B25 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		BEDDF6DD220512C6005D3B25 /* ProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
 		BEDDF6E022051BED005D3B25 /* Assembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembler.swift; sourceTree = "<group>"; };
+		BEDDF6E52208F6D1005D3B25 /* IncrementProductCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncrementProductCounter.swift; sourceTree = "<group>"; };
+		BEDDF6E72208F789005D3B25 /* IncrementProductService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncrementProductService.swift; sourceTree = "<group>"; };
+		BEDDF6ED2208FBE4005D3B25 /* DecrementProductCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecrementProductCounter.swift; sourceTree = "<group>"; };
+		BEDDF6EF2208FC02005D3B25 /* DecrementProductService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecrementProductService.swift; sourceTree = "<group>"; };
+		BEDDF6F22208FF84005D3B25 /* BaseParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseParser.swift; sourceTree = "<group>"; };
+		BEDDF6F32208FF84005D3B25 /* BaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
+		BEDDF6F622090184005D3B25 /* ContentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentType.swift; sourceTree = "<group>"; };
+		BEDDF6F82209029E005D3B25 /* DeleteProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteProduct.swift; sourceTree = "<group>"; };
+		BEDDF6FA220903CE005D3B25 /* DeleteProductService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteProductService.swift; sourceTree = "<group>"; };
+		BEDDF70022090AA7005D3B25 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BEDDF70322090B29005D3B25 /* LocalizationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizationManager.swift; sourceTree = "<group>"; };
+		BEDDF70522090BBC005D3B25 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		BEDDF70722090BF9005D3B25 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		BEDDF70922091364005D3B25 /* AddProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProduct.swift; sourceTree = "<group>"; };
+		BEDDF70B2209139B005D3B25 /* AddProductService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +129,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BEDDF6B22203FB8A005D3B25 /* ServiceLayer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,7 +175,6 @@
 				BEDDF64C2203E2F5005D3B25 /* Common */,
 				BEDDF64D2203E2FC005D3B25 /* Modules */,
 				BEDDF61B2203E2D5005D3B25 /* AppDelegate.swift */,
-				BEDDF6252203E2D5005D3B25 /* Assets.xcassets */,
 				BEDDF6272203E2D5005D3B25 /* LaunchScreen.storyboard */,
 				BEDDF62A2203E2D5005D3B25 /* Info.plist */,
 				BEDDF6222203E2D5005D3B25 /* CounterList.xcdatamodeld */,
@@ -182,13 +204,13 @@
 		BEDDF64C2203E2F5005D3B25 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				BEDDF70222090B1B005D3B25 /* Managers */,
+				BEDDF6FC22090A81005D3B25 /* Assets */,
+				BEDDF6F12208FF7A005D3B25 /* Service */,
 				BEDDF6DF22051BE0005D3B25 /* Assembler */,
 				BEDDF6D6220508BF005D3B25 /* Theme */,
-				BEDDF6D322050506005D3B25 /* Analytics */,
 				BEDDF6D022050478005D3B25 /* Views */,
 				BEDDF6CD2205032E005D3B25 /* Extensions */,
-				BEDDF6BD220405F0005D3B25 /* Router */,
-				BEDDF6A12203F3F3005D3B25 /* Entity */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -216,7 +238,6 @@
 		BEDDF6802203EF26005D3B25 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BEDDF6B02203FB82005D3B25 /* ServiceLayer.framework */,
 			);
 			path = Frameworks;
 			sourceTree = "<group>";
@@ -225,7 +246,6 @@
 			isa = PBXGroup;
 			children = (
 				BEDDF69E2203F39D005D3B25 /* UseCases */,
-				BEDDF6862203EF48005D3B25 /* Persistance */,
 				BEDDF6852203EF43005D3B25 /* Model */,
 				BEDDF6842203EF3D005D3B25 /* Service */,
 			);
@@ -236,6 +256,10 @@
 			isa = PBXGroup;
 			children = (
 				BEDDF68A2203EF97005D3B25 /* ProductListService.swift */,
+				BEDDF6E72208F789005D3B25 /* IncrementProductService.swift */,
+				BEDDF6EF2208FC02005D3B25 /* DecrementProductService.swift */,
+				BEDDF6FA220903CE005D3B25 /* DeleteProductService.swift */,
+				BEDDF70B2209139B005D3B25 /* AddProductService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -247,13 +271,6 @@
 				BEDDF6A52203F580005D3B25 /* ProductList.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		BEDDF6862203EF48005D3B25 /* Persistance */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Persistance;
 			sourceTree = "<group>";
 		};
 		BEDDF6872203EF52005D3B25 /* Views */ = {
@@ -268,21 +285,10 @@
 			isa = PBXGroup;
 			children = (
 				BEDDF69F2203F3B4005D3B25 /* GetProductList.swift */,
-			);
-			path = UseCases;
-			sourceTree = "<group>";
-		};
-		BEDDF6A12203F3F3005D3B25 /* Entity */ = {
-			isa = PBXGroup;
-			children = (
-				BEDDF6A22203F3F8005D3B25 /* UseCases */,
-			);
-			path = Entity;
-			sourceTree = "<group>";
-		};
-		BEDDF6A22203F3F8005D3B25 /* UseCases */ = {
-			isa = PBXGroup;
-			children = (
+				BEDDF6E52208F6D1005D3B25 /* IncrementProductCounter.swift */,
+				BEDDF6ED2208FBE4005D3B25 /* DecrementProductCounter.swift */,
+				BEDDF6F82209029E005D3B25 /* DeleteProduct.swift */,
+				BEDDF70922091364005D3B25 /* AddProduct.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -307,13 +313,6 @@
 			isa = PBXGroup;
 			children = (
 				BEDDF6BB22040110005D3B25 /* ProductListRouter.swift */,
-			);
-			path = Router;
-			sourceTree = "<group>";
-		};
-		BEDDF6BD220405F0005D3B25 /* Router */ = {
-			isa = PBXGroup;
-			children = (
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -343,6 +342,7 @@
 			children = (
 				BEDDF6CE220503AD005D3B25 /* UITableViewCell.swift */,
 				BEDDF6D922050BB4005D3B25 /* UIView.swift */,
+				BEDDF70722090BF9005D3B25 /* String.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -353,14 +353,6 @@
 				BEDDF6D122050486005D3B25 /* BaseViewController.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		BEDDF6D322050506005D3B25 /* Analytics */ = {
-			isa = PBXGroup;
-			children = (
-				BEDDF6D422050510005D3B25 /* Analytics.swift */,
-			);
-			path = Analytics;
 			sourceTree = "<group>";
 		};
 		BEDDF6D6220508BF005D3B25 /* Theme */ = {
@@ -385,6 +377,34 @@
 				BEDDF6E022051BED005D3B25 /* Assembler.swift */,
 			);
 			path = Assembler;
+			sourceTree = "<group>";
+		};
+		BEDDF6F12208FF7A005D3B25 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				BEDDF6F22208FF84005D3B25 /* BaseParser.swift */,
+				BEDDF6F32208FF84005D3B25 /* BaseService.swift */,
+				BEDDF6F622090184005D3B25 /* ContentType.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		BEDDF6FC22090A81005D3B25 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				BEDDF6252203E2D5005D3B25 /* Assets.xcassets */,
+				BEDDF70122090AA7005D3B25 /* Localizable.strings */,
+				BEDDF70522090BBC005D3B25 /* AppConstants.swift */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		BEDDF70222090B1B005D3B25 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				BEDDF70322090B29005D3B25 /* LocalizationManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -492,6 +512,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEDDF6FF22090AA7005D3B25 /* Localizable.strings in Resources */,
 				BEDDF6292203E2D5005D3B25 /* LaunchScreen.storyboard in Resources */,
 				BEDDF6CC2205031B005D3B25 /* ProductTableViewCell.xib in Resources */,
 				BEDDF6952203F21D005D3B25 /* ProductListViewController.xib in Resources */,
@@ -520,6 +541,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEDDF6EE2208FBE4005D3B25 /* DecrementProductCounter.swift in Sources */,
+				BEDDF6FB220903CE005D3B25 /* DeleteProductService.swift in Sources */,
 				BEDDF6DE220512C6005D3B25 /* ProductViewModel.swift in Sources */,
 				BEDDF6DA22050BB4005D3B25 /* UIView.swift in Sources */,
 				BEDDF6D222050486005D3B25 /* BaseViewController.swift in Sources */,
@@ -527,17 +550,28 @@
 				BEDDF6E122051BED005D3B25 /* Assembler.swift in Sources */,
 				BEDDF6BA220400D6005D3B25 /* ProductListPresenter.swift in Sources */,
 				BEDDF6242203E2D5005D3B25 /* CounterList.xcdatamodeld in Sources */,
+				BEDDF6E82208F789005D3B25 /* IncrementProductService.swift in Sources */,
 				BEDDF6A02203F3B4005D3B25 /* GetProductList.swift in Sources */,
 				BEDDF6BC22040110005D3B25 /* ProductListRouter.swift in Sources */,
+				BEDDF70822090BF9005D3B25 /* String.swift in Sources */,
+				BEDDF70C2209139B005D3B25 /* AddProductService.swift in Sources */,
+				BEDDF6E62208F6D1005D3B25 /* IncrementProductCounter.swift in Sources */,
 				BEDDF6942203F21D005D3B25 /* ProductListViewController.swift in Sources */,
 				BEDDF6A62203F580005D3B25 /* ProductList.swift in Sources */,
-				BEDDF6D522050510005D3B25 /* Analytics.swift in Sources */,
 				BEDDF6CB2205031B005D3B25 /* ProductTableViewCell.swift in Sources */,
+				BEDDF70A22091364005D3B25 /* AddProduct.swift in Sources */,
 				BEDDF68F2203EFBF005D3B25 /* Product.swift in Sources */,
+				BEDDF6F02208FC02005D3B25 /* DecrementProductService.swift in Sources */,
+				BEDDF6F42208FF84005D3B25 /* BaseParser.swift in Sources */,
 				BEDDF6CF220503AD005D3B25 /* UITableViewCell.swift in Sources */,
 				BEDDF6D8220508CC005D3B25 /* Theme.swift in Sources */,
 				BEDDF6B822040087005D3B25 /* ProductListInteractor.swift in Sources */,
+				BEDDF6F92209029E005D3B25 /* DeleteProduct.swift in Sources */,
+				BEDDF70422090B29005D3B25 /* LocalizationManager.swift in Sources */,
+				BEDDF6F52208FF84005D3B25 /* BaseService.swift in Sources */,
+				BEDDF70622090BBC005D3B25 /* AppConstants.swift in Sources */,
 				BEDDF61C2203E2D5005D3B25 /* AppDelegate.swift in Sources */,
+				BEDDF6F722090184005D3B25 /* ContentType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -579,6 +613,14 @@
 				BEDDF6282203E2D5005D3B25 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		BEDDF70122090AA7005D3B25 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BEDDF70022090AA7005D3B25 /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

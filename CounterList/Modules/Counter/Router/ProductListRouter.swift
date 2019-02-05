@@ -22,8 +22,20 @@ class ProductListRouter: ProductListRouterProtocol {
         productListRef.presenter?.router = ProductListRouter()
         productListRef.presenter?.view = productListRef
         productListRef.presenter?.interactor = ProductListInteractor(
-            useCase: GetProductListImpl(
+            addProductUseCase: AddProductImpl(
+                service: AddProductWebService()
+            ),
+            getProductListUseCase: GetProductListImpl(
                 service: ProductListWebService()
+            ),
+            incrementProductCounterUseCase: IncrementProductCounterImpl(
+                service: IncrementProductWebService()
+            ),
+            decrementProductCounterUseCase: DecrementProductCounterImpl(
+                service: DecrementProductWebService()
+            ),
+            deleteProductUseCase: DeleteProductImpl(
+                service: DeleteProductWebService()
             )
         )
         productListRef.presenter?.interactor?.presenter = presenter

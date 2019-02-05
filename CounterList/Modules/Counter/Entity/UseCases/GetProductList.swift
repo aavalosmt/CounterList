@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import ServiceLayer
 
 enum ProductListResponse {
     case success(products: [Product])
@@ -16,7 +15,7 @@ enum ProductListResponse {
 
 protocol GetProductList {
     var service: ProductListService { get }
-    func getProductList(usingCache: Bool, completion: @escaping (ProductListResponse) -> Void)
+    func execute(usingCache: Bool, completion: @escaping (ProductListResponse) -> Void)
 }
 
 class GetProductListImpl: GetProductList {
@@ -27,7 +26,7 @@ class GetProductListImpl: GetProductList {
         self.service = service
     }
     
-    func getProductList(usingCache: Bool, completion: @escaping (ProductListResponse) -> Void) {
+    func execute(usingCache: Bool, completion: @escaping (ProductListResponse) -> Void) {
         if usingCache {
             
         } else {
