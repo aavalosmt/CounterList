@@ -8,7 +8,16 @@
 
 import Foundation
 
-protocol ProductViewModelProtocol {
+enum ProductListViewModelType {
+    case product
+    case total
+}
+
+protocol ProductListViewModelProtocol {
+    var type: ProductListViewModelType { get }
+}
+
+protocol ProductViewModelProtocol: ProductListViewModelProtocol {
     var id: String { get }
     var title: String { get }
     var count: Int { get }
@@ -18,6 +27,7 @@ protocol ProductViewModelProtocol {
 // Even as an entity might have the exact same code as another one, this should be considered coincidence, as their reason to change are completely different (Single responsibility principle).
 
 struct ProductViewModel: ProductViewModelProtocol {
+    var type: ProductListViewModelType
     var id: String
     var title: String
     var count: Int
@@ -31,7 +41,7 @@ struct ProductViewModelAssembler<T, M: ProductViewModelProtocol>: Assembler {
         switch String(describing: type) {
         case String(describing: ProductEntity.self):
             guard let product = object as? ProductEntity else { return nil }
-            return ProductViewModel(id: product.id, title: product.title, count: product.count) as? M
+            return ProductViewModel(type: .product, id: product.id, title: product.title, count: product.count) as? M
         default:
             return nil
         }

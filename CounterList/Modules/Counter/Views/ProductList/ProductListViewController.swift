@@ -9,7 +9,7 @@
 import UIKit
 
 protocol ProductListViewProtocol: class {
-    func showProducts(with products: [ProductViewModelProtocol])
+    func showProducts(with products: [ProductListViewModelProtocol])
     func showError(with error: Error)
 }
 
@@ -20,7 +20,7 @@ class ProductListViewController: BaseViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var presenter: ProductListPresenterProtocol?
-    var productList = [ProductViewModelProtocol]()
+    var viewModels = [ProductListViewModelProtocol]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,10 +63,10 @@ class ProductListViewController: BaseViewController {
 
 extension ProductListViewController: ProductListViewProtocol {
     
-    func showProducts(with products: [ProductViewModelProtocol]) {
+    func showProducts(with products: [ProductListViewModelProtocol]) {
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
-            self.productList = products
+            self.viewModels = products
             self.tableView.reloadData()
             print(products)
         }
@@ -87,6 +87,7 @@ extension ProductListViewController: UITableViewDelegate, UITableViewDataSource 
 
     private func configureTableView() {
         tableView.register(UINib(nibName: ProductTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: ProductTableViewCell.identifier)
+        tableView.register(UINib(nibName: ProductTotalTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: ProductTotalTableViewCell.identifier)
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -94,25 +95,44 @@ extension ProductListViewController: UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return productList.count
+        return viewModels.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: ProductTableViewCell.identifier) as? ProductTableViewCell else {
+        let model = viewModels[indexPath.row]
+        switch model.type {
+        case .product:
+            return getProductTableViewCell(tableView, indexPath: indexPath)
+        case .total:
+            return getTotalTableViewCell(tableView, indexPath: indexPath)
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let delete = UITableViewRowAction(style: .destructive, title: "PRODUCT_LIST_CELL_ACTION_DELETE".localized()) { (action, indexPath) in
+            guard let product = self.viewModels[indexPath.row] as? ProductViewModelProtocol else { return }
+            self.presenter?.deleteProduct(id: product.id)
+        }
+        return [delete]
+    }
+    
+    private func getProductTableViewCell(_ tableView: UITableView, indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: ProductTableViewCell.identifier) as? ProductTableViewCell,
+               let model = viewModels[indexPath.row] as? ProductViewModelProtocol else {
             return UITableViewCell()
         }
-        let model = productList[indexPath.row]
         cell.configure(with: model)
         cell.delegate = self
         return cell
     }
     
-    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
-        let delete = UITableViewRowAction(style: .destructive, title: "PRODUCT_LIST_CELL_ACTION_DELETE".localized()) { (action, indexPath) in
-            let product = self.productList[indexPath.row]
-            self.presenter?.deleteProduct(id: product.id)
+    private func getTotalTableViewCell(_ tableView: UITableView, indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: ProductTotalTableViewCell.identifier) as? ProductTotalTableViewCell,
+            let model = viewModels[indexPath.row] as? ProductTotalViewModelProtocol else {
+                return UITableViewCell()
         }
-        return [delete]
+        cell.configure(with: model)
+        return cell
     }
 }
 

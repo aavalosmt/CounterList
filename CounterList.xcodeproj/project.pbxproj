@@ -47,6 +47,10 @@
 		BEDDF70C2209139B005D3B25 /* AddProductService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDF70B2209139B005D3B25 /* AddProductService.swift */; };
 		BEDDF70E2209199E005D3B25 /* EndpointManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDF70D2209199E005D3B25 /* EndpointManager.swift */; };
 		BEDDF71022091A3D005D3B25 /* Endpoints.plist in Resources */ = {isa = PBXBuildFile; fileRef = BEDDF70F22091A3D005D3B25 /* Endpoints.plist */; };
+		BEDDF712220920AC005D3B25 /* ProductTotalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDF711220920AC005D3B25 /* ProductTotalViewModel.swift */; };
+		BEDDF714220921A0005D3B25 /* ProductListViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDF713220921A0005D3B25 /* ProductListViewModelFactory.swift */; };
+		BEDDF71722092379005D3B25 /* ProductTotalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDF71522092379005D3B25 /* ProductTotalTableViewCell.swift */; };
+		BEDDF71822092379005D3B25 /* ProductTotalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEDDF71622092379005D3B25 /* ProductTotalTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,6 +130,10 @@
 		BEDDF70B2209139B005D3B25 /* AddProductService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductService.swift; sourceTree = "<group>"; };
 		BEDDF70D2209199E005D3B25 /* EndpointManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointManager.swift; sourceTree = "<group>"; };
 		BEDDF70F22091A3D005D3B25 /* Endpoints.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Endpoints.plist; sourceTree = "<group>"; };
+		BEDDF711220920AC005D3B25 /* ProductTotalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTotalViewModel.swift; sourceTree = "<group>"; };
+		BEDDF713220921A0005D3B25 /* ProductListViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewModelFactory.swift; sourceTree = "<group>"; };
+		BEDDF71522092379005D3B25 /* ProductTotalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTotalTableViewCell.swift; sourceTree = "<group>"; };
+		BEDDF71622092379005D3B25 /* ProductTotalTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductTotalTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -309,6 +317,7 @@
 			isa = PBXGroup;
 			children = (
 				BEDDF6B9220400D6005D3B25 /* ProductListPresenter.swift */,
+				BEDDF713220921A0005D3B25 /* ProductListViewModelFactory.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -337,6 +346,8 @@
 			children = (
 				BEDDF6C92205031B005D3B25 /* ProductTableViewCell.swift */,
 				BEDDF6CA2205031B005D3B25 /* ProductTableViewCell.xib */,
+				BEDDF71522092379005D3B25 /* ProductTotalTableViewCell.swift */,
+				BEDDF71622092379005D3B25 /* ProductTotalTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -371,6 +382,7 @@
 			isa = PBXGroup;
 			children = (
 				BEDDF6DD220512C6005D3B25 /* ProductViewModel.swift */,
+				BEDDF711220920AC005D3B25 /* ProductTotalViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -519,6 +531,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEDDF6FF22090AA7005D3B25 /* Localizable.strings in Resources */,
+				BEDDF71822092379005D3B25 /* ProductTotalTableViewCell.xib in Resources */,
 				BEDDF71022091A3D005D3B25 /* Endpoints.plist in Resources */,
 				BEDDF6292203E2D5005D3B25 /* LaunchScreen.storyboard in Resources */,
 				BEDDF6CC2205031B005D3B25 /* ProductTableViewCell.xib in Resources */,
@@ -549,11 +562,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEDDF6EE2208FBE4005D3B25 /* DecrementProductCounter.swift in Sources */,
+				BEDDF714220921A0005D3B25 /* ProductListViewModelFactory.swift in Sources */,
 				BEDDF6FB220903CE005D3B25 /* DeleteProductService.swift in Sources */,
 				BEDDF6DE220512C6005D3B25 /* ProductViewModel.swift in Sources */,
 				BEDDF6DA22050BB4005D3B25 /* UIView.swift in Sources */,
 				BEDDF6D222050486005D3B25 /* BaseViewController.swift in Sources */,
 				BEDDF68B2203EF97005D3B25 /* ProductListService.swift in Sources */,
+				BEDDF71722092379005D3B25 /* ProductTotalTableViewCell.swift in Sources */,
 				BEDDF6E122051BED005D3B25 /* Assembler.swift in Sources */,
 				BEDDF6BA220400D6005D3B25 /* ProductListPresenter.swift in Sources */,
 				BEDDF6242203E2D5005D3B25 /* CounterList.xcdatamodeld in Sources */,
@@ -576,6 +591,7 @@
 				BEDDF6B822040087005D3B25 /* ProductListInteractor.swift in Sources */,
 				BEDDF6F92209029E005D3B25 /* DeleteProduct.swift in Sources */,
 				BEDDF70422090B29005D3B25 /* LocalizationManager.swift in Sources */,
+				BEDDF712220920AC005D3B25 /* ProductTotalViewModel.swift in Sources */,
 				BEDDF6F52208FF84005D3B25 /* BaseService.swift in Sources */,
 				BEDDF70622090BBC005D3B25 /* AppConstants.swift in Sources */,
 				BEDDF61C2203E2D5005D3B25 /* AppDelegate.swift in Sources */,

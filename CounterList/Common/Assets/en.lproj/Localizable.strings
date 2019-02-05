@@ -11,6 +11,7 @@
 "PRODUCT_LIST_TITLE" = "Product List";
 "PRODUCT_LIST_BAR_ACTION_ADD" = "Add";
 "PRODUCT_LIST_CELL_ACTION_DELETE" = "Delete";
+"PRODUCT_LIST_CELL_TOTAL_TITLE" = "Total:";
 
 "PRODUCT_LIST_ALERT_ADD_TITLE" = "Add product";
 "PRODUCT_LIST_ALERT_ADD_DESCRIPTION" = "Enter the name of the product to add";

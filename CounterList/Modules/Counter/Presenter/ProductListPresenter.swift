@@ -31,6 +31,8 @@ class ProductListPresenter: ProductListPresenterProtocol {
     
     // MARK: - Constants
     
+    let factory: ProductListViewModelFactory = ProductListViewModelFactory()
+    
     struct Constants {
         static let debounceDelay: Double = 1.0
     }
@@ -38,6 +40,8 @@ class ProductListPresenter: ProductListPresenterProtocol {
     func viewDidLoad() {
         loadProductList()
     }
+    
+    // MARK: - Interactor
     
     func loadProductList() {
         interactor?.getProductList()
@@ -59,7 +63,6 @@ class ProductListPresenter: ProductListPresenterProtocol {
         interactor?.decrementCounter(id: id)
     }
     
-    
 }
 
 // MARK: - AppListOutputInteractorProtocol
@@ -67,7 +70,10 @@ class ProductListPresenter: ProductListPresenterProtocol {
 extension ProductListPresenter: ProductListOutputInteractorProtocol {
     
     func productListDidFetch(productList: [ProductViewModelProtocol]) {
-        view?.showProducts(with: productList)
+        var viewModels = [ProductListViewModelProtocol]()
+        viewModels.append(contentsOf: productList)
+        factory.createModels(from: &viewModels)
+        view?.showProducts(with: viewModels)
     }
     
     func productListDidFailed(with error: Error) {
