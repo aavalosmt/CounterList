@@ -19,7 +19,10 @@ class AddProductWebService: BaseService<[Product]>, AddProductService {
     }
     
     func addProduct(title: String, completion: @escaping ServiceResponseClosure) {
-        let url: String = "http://localhost:3000/api/v1/counter"
+        guard let url = EndpointManager.shared.getUrl(for: .AddProduct) else {
+            completion(.failure(error: ServiceError.badRequest))
+            return
+        }
         let contentType: ContentType = .applicationJson
 
         request(url: url,

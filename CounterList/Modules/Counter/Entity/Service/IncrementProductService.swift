@@ -19,7 +19,10 @@ class IncrementProductWebService: BaseService<[Product]>, IncrementProductServic
     }
     
     func incrementProduct(id: String, completion: @escaping ServiceResponseClosure) {
-        let url: String = "http://localhost:3000/api/v1/counter/inc"
+        guard let url = EndpointManager.shared.getUrl(for: .IncrementCounter) else {
+            completion(.failure(error: ServiceError.badRequest))
+            return
+        }
         let contentType: ContentType = .applicationJson
 
         request(url: url,

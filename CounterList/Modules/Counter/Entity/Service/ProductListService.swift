@@ -15,7 +15,10 @@ protocol ProductListService {
 class ProductListWebService: BaseService<[Product]>, ProductListService {
     
     func getProductList(completion: @escaping ServiceResponseClosure) {
-        let url = "http://localhost:3000/api/v1/counters"
+        guard let url = EndpointManager.shared.getUrl(for: .GetProducts) else {
+            completion(.failure(error: ServiceError.badRequest))
+            return
+        }
         request(url: url,
                 method: .get,
                 parameters: [:],

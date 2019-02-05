@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>DeleteProduct</key>
+	<dict>
+		<key>Timeout</key>
+		<integer>30</integer>
+		<key>Path</key>
+		<string>/api/v1/counter</string>
+	</dict>
+	<key>AddProduct</key>
+	<dict>
+		<key>Timeout</key>
+		<integer>30</integer>
+		<key>Path</key>
+		<string>/api/v1/counter</string>
+	</dict>
+	<key>DecrementCounter</key>
+	<dict>
+		<key>Timeout</key>
+		<integer>30</integer>
+		<key>Path</key>
+		<string>/api/v1/counter/dec</string>
+	</dict>
+	<key>IncrementCounter</key>
+	<dict>
+		<key>Timeout</key>
+		<integer>30</integer>
+		<key>Path</key>
+		<string>/api/v1/counter/inc</string>
+	</dict>
+	<key>GetProducts</key>
+	<dict>
+		<key>Timeout</key>
+		<integer>30</integer>
+		<key>Path</key>
+		<string>/api/v1/counters</string>
+	</dict>
+</dict>
+</plist>

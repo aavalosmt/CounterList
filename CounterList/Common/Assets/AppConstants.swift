@@ -24,6 +24,7 @@ struct AppConstants {
         static let JPGExtension = "jpg"
         static let JSONExtension = "json"
         static let LPROJExtension = "lproj"
+        static let PLISTExtension = "plist"
     }
     
 }

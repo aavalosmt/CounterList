@@ -45,6 +45,8 @@
 		BEDDF70822090BF9005D3B25 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDF70722090BF9005D3B25 /* String.swift */; };
 		BEDDF70A22091364005D3B25 /* AddProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDF70922091364005D3B25 /* AddProduct.swift */; };
 		BEDDF70C2209139B005D3B25 /* AddProductService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDF70B2209139B005D3B25 /* AddProductService.swift */; };
+		BEDDF70E2209199E005D3B25 /* EndpointManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDF70D2209199E005D3B25 /* EndpointManager.swift */; };
+		BEDDF71022091A3D005D3B25 /* Endpoints.plist in Resources */ = {isa = PBXBuildFile; fileRef = BEDDF70F22091A3D005D3B25 /* Endpoints.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +124,8 @@
 		BEDDF70722090BF9005D3B25 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		BEDDF70922091364005D3B25 /* AddProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProduct.swift; sourceTree = "<group>"; };
 		BEDDF70B2209139B005D3B25 /* AddProductService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductService.swift; sourceTree = "<group>"; };
+		BEDDF70D2209199E005D3B25 /* EndpointManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointManager.swift; sourceTree = "<group>"; };
+		BEDDF70F22091A3D005D3B25 /* Endpoints.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Endpoints.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -395,6 +399,7 @@
 				BEDDF6252203E2D5005D3B25 /* Assets.xcassets */,
 				BEDDF70122090AA7005D3B25 /* Localizable.strings */,
 				BEDDF70522090BBC005D3B25 /* AppConstants.swift */,
+				BEDDF70F22091A3D005D3B25 /* Endpoints.plist */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -403,6 +408,7 @@
 			isa = PBXGroup;
 			children = (
 				BEDDF70322090B29005D3B25 /* LocalizationManager.swift */,
+				BEDDF70D2209199E005D3B25 /* EndpointManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -513,6 +519,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEDDF6FF22090AA7005D3B25 /* Localizable.strings in Resources */,
+				BEDDF71022091A3D005D3B25 /* Endpoints.plist in Resources */,
 				BEDDF6292203E2D5005D3B25 /* LaunchScreen.storyboard in Resources */,
 				BEDDF6CC2205031B005D3B25 /* ProductTableViewCell.xib in Resources */,
 				BEDDF6952203F21D005D3B25 /* ProductListViewController.xib in Resources */,
@@ -553,6 +560,7 @@
 				BEDDF6E82208F789005D3B25 /* IncrementProductService.swift in Sources */,
 				BEDDF6A02203F3B4005D3B25 /* GetProductList.swift in Sources */,
 				BEDDF6BC22040110005D3B25 /* ProductListRouter.swift in Sources */,
+				BEDDF70E2209199E005D3B25 /* EndpointManager.swift in Sources */,
 				BEDDF70822090BF9005D3B25 /* String.swift in Sources */,
 				BEDDF70C2209139B005D3B25 /* AddProductService.swift in Sources */,
 				BEDDF6E62208F6D1005D3B25 /* IncrementProductCounter.swift in Sources */,

@@ -19,7 +19,10 @@ class DecrementProductWebService: BaseService<[Product]>, DecrementProductServic
     }
     
     func decrementProduct(id: String, completion: @escaping ServiceResponseClosure) {
-        let url: String = "http://localhost:3000/api/v1/counter/dec"
+        guard let url = EndpointManager.shared.getUrl(for: .DecrementCounter) else {
+            completion(.failure(error: ServiceError.badRequest))
+            return
+        }
         let contentType: ContentType = .applicationJson
         
         request(url: url,
