@@ -29,7 +29,7 @@ protocol ProductListOutputInteractorProtocol: class {
     //Interactor -> Presenter
     func productListDidFetch(productList: [ProductViewModelProtocol])
     func productListDidFailed(with error: Error)
-    func counterDidUpdate(id: String, count: Int)
+    func counterDidUpdate(id: String, products: [ProductViewModelProtocol])
 }
 
 class ProductListInteractor: ProductListInputInteractorProtocol {
@@ -95,8 +95,11 @@ class ProductListInteractor: ProductListInputInteractorProtocol {
     
     func handleCounterResponse(response: ProductListResponse, id: String, count: Int) {
         switch response {
-        case .success:
-            presenter?.counterDidUpdate(id: id, count: count)
+        case .success(let products):
+            let productList = products.compactMap({
+                self.assembler.getObject(fromObject: $0, type: ProductEntity.self)
+            }).sorted(by: { $0.title < $1.title })
+            presenter?.counterDidUpdate(id: id, products: productList)
         case .failure(let error):
             presenter?.productListDidFailed(with: error)
         }

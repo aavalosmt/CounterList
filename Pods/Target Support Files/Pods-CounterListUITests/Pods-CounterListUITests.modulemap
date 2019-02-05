@@ -1,0 +1,6 @@
+framework module Pods_CounterListUITests {
+  umbrella header "Pods-CounterListUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

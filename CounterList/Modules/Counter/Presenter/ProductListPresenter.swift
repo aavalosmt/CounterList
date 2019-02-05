@@ -108,8 +108,12 @@ extension ProductListPresenter: ProductListOutputInteractorProtocol {
         view?.showError(with: error)
     }
     
-    func counterDidUpdate(id: String, count: Int) {
-        view?.didUpdateCounter(id: id, count: count)
+    func counterDidUpdate(id: String, products: [ProductViewModelProtocol]) {
+        var viewModels = [ProductListViewModelProtocol]()
+        viewModels.append(contentsOf: products)
+        factory.createModels(from: &viewModels)
+        view?.didUpdateCounter(id: id, products: viewModels)
+        oldViewModels = products
     }
     
 }

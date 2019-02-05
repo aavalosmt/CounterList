@@ -11,7 +11,7 @@ import UIKit
 protocol ProductListViewProtocol: class {
     func showProducts(with products: [ProductListViewModelProtocol], indices: [Int])
     func showError(with error: Error)
-    func didUpdateCounter(id: String, count: Int)
+    func didUpdateCounter(id: String, products: [ProductListViewModelProtocol])
 }
 
 class ProductListViewController: BaseViewController {
@@ -58,7 +58,22 @@ class ProductListViewController: BaseViewController {
         guard let name = name, !name.isEmpty else { return }
         presenter?.addProduct(title: name)
     }
-
+    
+    private func reloadTotalCell() {
+        guard let index = viewModels.firstIndex(where: { $0.type == .total }),
+              let model = viewModels[index] as? ProductTotalViewModelProtocol else { return }
+        
+        let indexPath = IndexPath(row: index, section: 0)
+        
+        DispatchQueue.main.async { [weak self, model] in
+            guard let self = self else { return }
+            guard let visibleCellPaths = self.tableView.indexPathsForVisibleRows else { return }
+            if visibleCellPaths.contains(indexPath),
+               let cell = self.tableView.cellForRow(at: indexPath) as? ProductTotalTableViewCell {
+                cell.configure(with: model)
+            }
+        }
+    }
 }
 
 // MARK: - ProductListViewProtocol
@@ -78,6 +93,7 @@ extension ProductListViewController: ProductListViewProtocol {
             } else {
                 self.tableView.reloadData()
             }
+            self.reloadTotalCell()
         }
     }
     
@@ -88,21 +104,19 @@ extension ProductListViewController: ProductListViewProtocol {
         }
     }
     
-    func didUpdateCounter(id: String, count: Int) {
-        guard let index = viewModels.compactMap({ $0 as? ProductViewModelProtocol }).firstIndex(where: { $0.id == id }) else { return }
+    func didUpdateCounter(id: String, products: [ProductListViewModelProtocol]) {
+        guard let index = viewModels.compactMap({ $0 as? ProductViewModelProtocol }).firstIndex(where: { $0.id == id }),
+              let totalIndex = viewModels.firstIndex(where: { $0.type == .total }) else { return }
+        self.viewModels = products
         
-        // Will never crash because compact mapped
-        let product = viewModels[index] as! ProductViewModelProtocol
-        viewModels[index] = product.withCount(count: count)
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
             guard let visibleCellPaths = self.tableView.indexPathsForVisibleRows else { return }
             if visibleCellPaths.contains(IndexPath(row: index, section: 0)) {
-                self.tableView.reloadRows(at: [IndexPath(row: index, section: 0)], with: .none)
+                self.tableView.reloadRows(at: [IndexPath(row: index, section: 0), IndexPath(row: totalIndex, section: 0)], with: .none)
             }
         }
     }
-    
 }
 
 // MARK: - UITableViewDelegate, UITableViewDataSource
@@ -158,7 +172,7 @@ extension ProductListViewController: UITableViewDelegate, UITableViewDataSource 
     
     private func getTotalTableViewCell(_ tableView: UITableView, indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: ProductTotalTableViewCell.identifier) as? ProductTotalTableViewCell,
-            let model = viewModels[indexPath.row] as? ProductTotalViewModelProtocol else {
+              let model = viewModels[indexPath.row] as? ProductTotalViewModelProtocol else {
                 return UITableViewCell()
         }
         cell.configure(with: model)
