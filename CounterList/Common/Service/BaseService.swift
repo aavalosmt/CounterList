@@ -91,7 +91,7 @@ open class BaseService<Model: Codable>: Service {
             let session: URLSession = URLSession(configuration: self.configuration)
             let task = session.dataTask(with: request) { (body, response, error) in
                 guard let urlResponse = response as? HTTPURLResponse else {
-                    completion(.failure(error: ServiceError.badRequest))
+                    completion(.failure(error: ServiceError.serverError))
                     return
                 }
                 self.processResponse(data: body, urlResponse: urlResponse, completion: completion)

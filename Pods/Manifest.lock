@@ -12,13 +12,16 @@ PODS:
   - OHHTTPStubs/OHPathHelpers (6.1.0)
   - OHHTTPStubs/Swift (6.1.0):
     - OHHTTPStubs/Default
+  - SkyFloatingLabelTextField (3.7.0)
 
 DEPENDENCIES:
   - OHHTTPStubs/Swift
+  - SkyFloatingLabelTextField (~> 3.0)
 
 SPEC CHECKSUMS:
   OHHTTPStubs: 1e21c7d2c084b8153fc53d48400d8919d2d432d0
+  SkyFloatingLabelTextField: 4b46db0ab1ccde0919cded29c656e6b4805eda04
 
-PODFILE CHECKSUM: aec3243130a248642fcc8297879ea4c97e448f67
+PODFILE CHECKSUM: 0e91e689e4f79af5a690ef4654230159e81618eb
 
 COCOAPODS: 1.4.0

@@ -6,6 +6,7 @@ target 'CounterList' do
   use_frameworks!
 
   # Pods for CounterList
+  pod 'SkyFloatingLabelTextField', '~> 3.0'
 
   target 'CounterListTests' do
     inherit! :search_paths

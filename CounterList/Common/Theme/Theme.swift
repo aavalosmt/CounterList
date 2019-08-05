@@ -20,7 +20,11 @@ public protocol ThemeColors {
 
 public protocol PalleteColors {
     var primary: UIColor { get }
+    var dark: UIColor { get }
+    var light: UIColor { get }
+    
     var actionLink: UIColor { get }
+    var lightBackground: UIColor { get }
     
     var title: UIColor { get }
     var paragraph: UIColor { get }
@@ -58,8 +62,12 @@ public struct AppFontSizes: ThemeFontSizesProtocol {
 }
 
 public struct AppPallete: PalleteColors {
-    public let primary: UIColor = UIColor.black
+    public let primary: UIColor = UIColor(hex: 0xe91e63)
+    public let dark: UIColor = UIColor(hex: 0xb0003a)
+    public let light: UIColor = UIColor(hex: 0xff6090)
+    
     public let actionLink: UIColor = UIColor.black
+    public var lightBackground: UIColor = UIColor(displayP3Red: 240/255, green: 240/255, blue: 240/255, alpha: 1.0)
     
     public let title: UIColor = UIColor.black
     public let paragraph: UIColor = UIColor.black

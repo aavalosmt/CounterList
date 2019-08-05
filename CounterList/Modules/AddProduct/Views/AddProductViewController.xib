@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddProductViewController" customModule="CounterList" customModuleProvider="target">
+            <connections>
+                <outlet property="closeButton" destination="Puh-iV-Jss" id="dy2-IO-Thi"/>
+                <outlet property="confirmButton" destination="dxz-cY-pMG" id="c1k-lG-cCO"/>
+                <outlet property="floatingTextField" destination="Jmq-zl-t9D" id="E2p-gD-rx8"/>
+                <outlet property="keyboardHeightLayoutConstraint" destination="T88-kw-cfo" id="0FR-os-sFC"/>
+                <outlet property="textFieldCenterYLayoutConstraint" destination="AOH-xq-GlT" id="doq-Qk-aI2"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Puh-iV-Jss">
+                    <rect key="frame" x="305" y="40" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="6JR-Um-qnW"/>
+                        <constraint firstAttribute="height" constant="50" id="M9w-Sf-yf4"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
+                    <state key="normal" title="X">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="closeButtonClick:" destination="-1" eventType="touchUpInside" id="wtl-Gt-4sy"/>
+                    </connections>
+                </button>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jmq-zl-t9D" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
+                    <rect key="frame" x="30" y="308.5" width="315" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="yXb-5w-stP"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dxz-cY-pMG">
+                    <rect key="frame" x="0.0" y="607" width="375" height="60"/>
+                    <color key="backgroundColor" red="1" green="0.1857388616" blue="0.57339501380000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="Xyc-XI-9fm"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                    <state key="normal" title="Confirm">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="confirmButtonClick:" destination="-1" eventType="touchUpInside" id="fm3-xw-iDr"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Puh-iV-Jss" secondAttribute="trailing" constant="20" id="1ky-jv-3kI"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Jmq-zl-t9D" secondAttribute="trailing" constant="30" id="7yX-PO-adz"/>
+                <constraint firstItem="Jmq-zl-t9D" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="AOH-xq-GlT"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="dxz-cY-pMG" secondAttribute="trailing" id="Jye-nF-KL7"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="dxz-cY-pMG" secondAttribute="bottom" id="T88-kw-cfo"/>
+                <constraint firstItem="Puh-iV-Jss" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="foI-ru-E6e"/>
+                <constraint firstItem="dxz-cY-pMG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="g22-6z-aXz"/>
+                <constraint firstItem="Jmq-zl-t9D" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="vTY-BJ-qFh"/>
+                <constraint firstItem="Jmq-zl-t9D" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="wLq-aL-UiZ"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+</document>

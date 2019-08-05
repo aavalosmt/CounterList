@@ -13,7 +13,7 @@ class ProductListViewMock: ProductListViewProtocol {
     var showProductsWasCalled: Bool = false
     var updateCounterWasCalled: Bool = false
     
-    func showProducts(with products: [ProductListViewModelProtocol], indices: [Int]) {
+    func showProducts(with products: [ProductListViewModelProtocol]) {
         showProductsWasCalled = true
     }
     
@@ -21,7 +21,7 @@ class ProductListViewMock: ProductListViewProtocol {
         
     }
     
-    func didUpdateCounter(id: String, count: Int) {
+    func didUpdateCounter(id: String, products: [ProductListViewModelProtocol]) {
         updateCounterWasCalled = true
     }
 }
