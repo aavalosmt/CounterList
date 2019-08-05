@@ -20,11 +20,11 @@
 		BE27264622F667AE003858E3 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE27264522F667AE003858E3 /* UIColor.swift */; };
 		BE27264822F669E2003858E3 /* ButtonCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE27264722F669E2003858E3 /* ButtonCounterView.swift */; };
 		BE27264A22F669EC003858E3 /* ButtonCounterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE27264922F669EC003858E3 /* ButtonCounterView.xib */; };
-		BE27266222F67A8D003858E3 /* CircularRevealAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE27265F22F67A8D003858E3 /* CircularRevealAnimator.swift */; };
-		BE27266322F67A8D003858E3 /* CircularRevealTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE27266022F67A8D003858E3 /* CircularRevealTransitionAnimator.swift */; };
-		BE27266422F67A8D003858E3 /* AnimationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE27266122F67A8D003858E3 /* AnimationDelegate.swift */; };
 		BE27266E22F67F52003858E3 /* AddProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE27266C22F67F52003858E3 /* AddProductViewController.swift */; };
 		BE27266F22F67F52003858E3 /* AddProductViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE27266D22F67F52003858E3 /* AddProductViewController.xib */; };
+		BE3CC05222F8BAE3005EC271 /* CircularRevealTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3CC04F22F8BAE3005EC271 /* CircularRevealTransitionAnimator.swift */; };
+		BE3CC05322F8BAE3005EC271 /* CircularRevealAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3CC05022F8BAE3005EC271 /* CircularRevealAnimator.swift */; };
+		BE3CC05422F8BAE3005EC271 /* AnimationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3CC05122F8BAE3005EC271 /* AnimationDelegate.swift */; };
 		BEDDF61C2203E2D5005D3B25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDF61B2203E2D5005D3B25 /* AppDelegate.swift */; };
 		BEDDF6262203E2D5005D3B25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEDDF6252203E2D5005D3B25 /* Assets.xcassets */; };
 		BEDDF6292203E2D5005D3B25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEDDF6272203E2D5005D3B25 /* LaunchScreen.storyboard */; };
@@ -124,11 +124,11 @@
 		BE27264522F667AE003858E3 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		BE27264722F669E2003858E3 /* ButtonCounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCounterView.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		BE27264922F669EC003858E3 /* ButtonCounterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonCounterView.xib; sourceTree = "<group>"; };
-		BE27265F22F67A8D003858E3 /* CircularRevealAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CircularRevealAnimator.swift; path = "../../../../Side-Menu.iOS-master/MenuExample/Misc/CircularRevealAnimator.swift"; sourceTree = "<group>"; };
-		BE27266022F67A8D003858E3 /* CircularRevealTransitionAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CircularRevealTransitionAnimator.swift; path = "../../../../Side-Menu.iOS-master/MenuExample/Misc/CircularRevealTransitionAnimator.swift"; sourceTree = "<group>"; };
-		BE27266122F67A8D003858E3 /* AnimationDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnimationDelegate.swift; path = "../../../../Side-Menu.iOS-master/MenuExample/Misc/AnimationDelegate.swift"; sourceTree = "<group>"; };
 		BE27266C22F67F52003858E3 /* AddProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductViewController.swift; sourceTree = "<group>"; };
 		BE27266D22F67F52003858E3 /* AddProductViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddProductViewController.xib; sourceTree = "<group>"; };
+		BE3CC04F22F8BAE3005EC271 /* CircularRevealTransitionAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularRevealTransitionAnimator.swift; sourceTree = "<group>"; };
+		BE3CC05022F8BAE3005EC271 /* CircularRevealAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularRevealAnimator.swift; sourceTree = "<group>"; };
+		BE3CC05122F8BAE3005EC271 /* AnimationDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationDelegate.swift; sourceTree = "<group>"; };
 		BEDDF6182203E2D5005D3B25 /* CounterList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CounterList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEDDF61B2203E2D5005D3B25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEDDF6252203E2D5005D3B25 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -325,9 +325,9 @@
 		BE27265E22F67A87003858E3 /* Animations */ = {
 			isa = PBXGroup;
 			children = (
-				BE27266122F67A8D003858E3 /* AnimationDelegate.swift */,
-				BE27265F22F67A8D003858E3 /* CircularRevealAnimator.swift */,
-				BE27266022F67A8D003858E3 /* CircularRevealTransitionAnimator.swift */,
+				BE3CC05122F8BAE3005EC271 /* AnimationDelegate.swift */,
+				BE3CC05022F8BAE3005EC271 /* CircularRevealAnimator.swift */,
+				BE3CC04F22F8BAE3005EC271 /* CircularRevealTransitionAnimator.swift */,
 			);
 			path = Animations;
 			sourceTree = "<group>";
@@ -958,17 +958,17 @@
 				BEDDF71A220928B7005D3B25 /* Array.swift in Sources */,
 				BEDDF6BA220400D6005D3B25 /* ProductListPresenter.swift in Sources */,
 				BEDDF6E82208F789005D3B25 /* IncrementProductService.swift in Sources */,
+				BE3CC05422F8BAE3005EC271 /* AnimationDelegate.swift in Sources */,
 				BEDDF6A02203F3B4005D3B25 /* GetProductList.swift in Sources */,
 				BE27263B22F64DDB003858E3 /* ProductCollectionViewCell.swift in Sources */,
-				BE27266322F67A8D003858E3 /* CircularRevealTransitionAnimator.swift in Sources */,
 				BE27266E22F67F52003858E3 /* AddProductViewController.swift in Sources */,
 				BEDDF6BC22040110005D3B25 /* ProductListRouter.swift in Sources */,
 				BEDDF70E2209199E005D3B25 /* EndpointManager.swift in Sources */,
 				BEDDF70822090BF9005D3B25 /* String.swift in Sources */,
+				BE3CC05222F8BAE3005EC271 /* CircularRevealTransitionAnimator.swift in Sources */,
 				BEDDF70C2209139B005D3B25 /* AddProductService.swift in Sources */,
 				BE27263F22F65299003858E3 /* UICollectionView.swift in Sources */,
 				BEDDF6E62208F6D1005D3B25 /* IncrementProductCounter.swift in Sources */,
-				BE27266422F67A8D003858E3 /* AnimationDelegate.swift in Sources */,
 				BEDDF6942203F21D005D3B25 /* ProductListViewController.swift in Sources */,
 				BEDDF6A62203F580005D3B25 /* ProductList.swift in Sources */,
 				BEDDF70A22091364005D3B25 /* AddProduct.swift in Sources */,
@@ -978,8 +978,8 @@
 				BEDDF6CF220503AD005D3B25 /* UICollectionViewCell.swift in Sources */,
 				BE27264622F667AE003858E3 /* UIColor.swift in Sources */,
 				BEDDF6D8220508CC005D3B25 /* Theme.swift in Sources */,
+				BE3CC05322F8BAE3005EC271 /* CircularRevealAnimator.swift in Sources */,
 				BEDDF6B822040087005D3B25 /* ProductListInteractor.swift in Sources */,
-				BE27266222F67A8D003858E3 /* CircularRevealAnimator.swift in Sources */,
 				BEDDF6F92209029E005D3B25 /* DeleteProduct.swift in Sources */,
 				BEDDF70422090B29005D3B25 /* LocalizationManager.swift in Sources */,
 				BE27263822F64500003858E3 /* AddProductRouter.swift in Sources */,
